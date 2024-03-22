@@ -1,36 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ImageBackground, Button } from 'react-native';
-import { useFonts } from 'expo-font';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+// Import all pages
+import HomeScreen from './components/HomeScreen';
+import ProfileScreen from './components/ProfileScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    'ArcadeClassic': require('./assets/fonts/ArcadeClassic.ttf'),
-  });
   return (
-    <View style={styles.container}>
-    <ImageBackground 
-    source={require('./assets/celesteBg.jpg')} 
-    resizeMode="cover" 
-    style={styles.image}>
-      <Text style={styles.text}>THIS IS MY TEST TEXT</Text>
-      <Button title="Press Me" />
-    </ImageBackground>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  image: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontFamily: 'ArcadeClassic',
-    fontSize: 50,
-  },
-});
+// Navigation between pages
+// NOTE the 'Screen' listed at the top of the stack will automatically be displayed when the app is loaded
+
+    <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Profile" component={ProfileScreen} />
+        </Stack.Navigator>
+    </NavigationContainer>
+  );
+};

@@ -1,32 +1,21 @@
-import { StyleSheet, Image, Text, View, ImageBackground, Button } from 'react-native';
-import { useFonts } from 'expo-font';
+import { StyleSheet, Image, View, ImageBackground, Pressable } from 'react-native';
 
 export default function HomeScreen({navigation}) {
-
-    const [] = useFonts({
-      'ArcadeClassic': require('../assets/fonts/ArcadeClassic.ttf'),
-    });
-
     return (
 
       <View style={styles.container}>
         <ImageBackground 
-          source={require('../assets/celesteBg.jpg')} 
+          source={require('../assets/background.jpg')} 
           resizeMode="cover" 
-          style={styles.image}>
+          style={styles.bgImage}>
   
-          <Text style={styles.text}>HOME PAGE</Text>
-          <Button title="Press Me" />
-          <Image source={require('../assets/fullHeart.png')}
-            style={styles.heart} />
-          <Image source={require('../assets/emptyHeart.png')}
-            style={styles.heart} />
-  
-          <Button
-            title="Go to Jane's profile"
-            onPress={() =>
-              navigation.navigate('Profile') //This is how to navigate to another page
-            } />
+          <Image source={require('../assets/level7.png')}
+            style={styles.level} />
+            <Pressable onPress={() =>
+              navigation.navigate('UnlockLevel7')} >
+              <Image source={require('../assets/unlockButton.png')}
+                style={styles.unlock} />
+            </Pressable>
 
         </ImageBackground>
       </View>
@@ -39,17 +28,18 @@ export default function HomeScreen({navigation}) {
     container: {
       flex: 1
     },
-    image: {
+    level: {
+      width: 300,
+      height: 160,
+      marginBottom: 100,
+    },
+    bgImage: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
     },
-    text: {
-      fontFamily: 'ArcadeClassic',
-      fontSize: 50,
-    },
-    heart: {
-      width: 100,
-      height: 100,
+    unlock: {
+      width: 150,
+      height: 48,
     },
   });

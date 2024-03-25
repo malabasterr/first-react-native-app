@@ -1,4 +1,4 @@
-import { StyleSheet, Image, View, ImageBackground, Pressable, Text, TextInput } from 'react-native';
+import { StyleSheet, Image, View, ImageBackground, Text, TextInput } from 'react-native';
 
 export default function Level7Screen({navigation}) {
 
@@ -19,30 +19,27 @@ export default function Level7Screen({navigation}) {
           source={require('../assets/background.jpg')} 
           resizeMode="cover" 
           style={styles.bgImage}>
-
-          
   
-          <Image source={require('../assets/level7.png')}
+            <Image source={require('../assets/level7.png')}
             style={styles.levelTitle} />
 
-<Text>To reach Level 7, enter the name of where you have left the cars...</Text>
-          <TextInput
-            style={styles.input}
-            onChangeText={setAnswer}
-            value={answer}
-            placeholder="ANSWER"
-            keyboardType="default"
-            autoCapitalize='words'
-            enterKeyHint='enter'
-            maxLength={8}
-            textAlign='center'
+            <Text>There are 9 houses in a line, and in each house resides one of the players of this game.</Text>
+
+            {/* Carousel to go here */}
+
+            <Text>Who lives in the orange house?</Text>
+            <TextInput
+                style={styles.input}
+                onChangeText={setAnswer}
+                value={answer}
+                placeholder="ANSWER"
+                keyboardType="default"
+                autoCapitalize='words'
+                enterKeyHint='enter'
+                maxLength={8}
+                textAlign='center'
           />
         <Button title="Submit" onPress={checkAnswer} />
-            <Pressable onPress={() =>
-              navigation.navigate('UnlockLevel7')} >
-              <Image source={require('../assets/unlockButton.png')}
-                style={styles.unlock} />
-            </Pressable>
 
         </ImageBackground>
       </View>

@@ -1,6 +1,5 @@
-import { StyleSheet, View, ImageBackground, Text } from 'react-native';
+import { StyleSheet, View, ImageBackground, Text, Button } from 'react-native';
 import React from 'react';
-import { Button } from 'react-native-elements';
 
 export default function Level9Screen({navigation}) {
     return (
@@ -10,16 +9,53 @@ export default function Level9Screen({navigation}) {
         resizeMode="cover" 
         style={styles.bgImage}>
         
-        <Text>Here is some example text.</Text>
-        <Button>A</Button>
-        <Button>B</Button>
-        <Button>C</Button>
-        <Button>D</Button>
-        <Button>E</Button>
-        <Button>F</Button>
-        <Button>G</Button>
-        <Button>H</Button>
-        <Button>I</Button>
+        <Text>The final hurdle!</Text>
+
+        <Pressable onPress={() =>
+            navigation.navigate('ButtonA')} >
+            <Image source={require('../assets/exitCross.png')} //This will be an image saying 'A'
+                style={styles.button} />
+        </Pressable>
+        <Pressable onPress={() =>
+            navigation.navigate('ButtonB')} >
+            <Image source={require('../assets/exitCross.png')} //This will be an image saying 'B'
+                style={styles.button} />
+        </Pressable>
+        <Pressable onPress={() =>
+            navigation.navigate('ButtonC')} >
+            <Image source={require('../assets/exitCross.png')} //This will be an image saying 'C'
+                style={styles.button} />
+        </Pressable>
+        <Pressable onPress={() =>
+            navigation.navigate('ButtonD')} >
+            <Image source={require('../assets/exitCross.png')} //This will be an image saying 'D'
+                style={styles.button} />
+        </Pressable>
+        <Pressable onPress={() =>
+            navigation.navigate('ButtonE')} >
+            <Image source={require('../assets/exitCross.png')} //This will be an image saying 'E'
+                style={styles.button} />
+        </Pressable>
+        <Pressable onPress={() =>
+            navigation.navigate('ButtonF')} >
+            <Image source={require('../assets/exitCross.png')} //This will be an image saying 'F'
+                style={styles.button} />
+        </Pressable>
+        <Pressable onPress={() =>
+            navigation.navigate('ButtonG')} >
+            <Image source={require('../assets/exitCross.png')} //This will be an image saying 'G'
+                style={styles.button} />
+        </Pressable>
+        <Pressable onPress={() =>
+            navigation.navigate('ButtonH')} >
+            <Image source={require('../assets/exitCross.png')} //This will be an image saying 'H'
+                style={styles.button} />
+        </Pressable>
+        <Pressable onPress={() =>
+            navigation.navigate('ButtonI')} >
+            <Image source={require('../assets/exitCross.png')} //This will be an image saying 'I'
+                style={styles.button} />
+        </Pressable>
 
       </ImageBackground>
     </View>
@@ -35,5 +71,7 @@ export default function Level9Screen({navigation}) {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
+    },
+    button: {
     },
   });

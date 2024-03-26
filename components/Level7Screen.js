@@ -1,4 +1,8 @@
-import { StyleSheet, Image, View, ImageBackground, Text, TextInput } from 'react-native';
+import { StyleSheet, Image, View, ImageBackground, Text, TextInput, Button } from 'react-native';
+import React from 'react';
+import Carousel from 'react-native-snap-carousel'
+import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from './Carousel/CarouselCardItem'
+import data from './Carousel/data'
 
 export default function Level7Screen({navigation}) {
 
@@ -25,7 +29,16 @@ export default function Level7Screen({navigation}) {
 
             <Text>There are 9 houses in a line, and in each house resides one of the players of this game.</Text>
 
-            {/* Carousel to go here */}
+            <Carousel
+                layout="stack"
+                layoutCardOffset={12}
+                data={data}
+                renderItem={CarouselCardItem}
+                sliderWidth={SLIDER_WIDTH}
+                itemWidth={ITEM_WIDTH}
+                inactiveSlideShift={0}
+                useScrollView={true}
+            />
 
             <Text>Who lives in the orange house?</Text>
             <TextInput
@@ -62,8 +75,12 @@ export default function Level7Screen({navigation}) {
       justifyContent: 'center',
       alignItems: 'center',
     },
-    unlock: {
-      width: 150,
-      height: 48,
-    },
+    input: {
+        height: 40,
+        width: 150,
+        margin: 50,
+        borderWidth: 1,
+        padding: 10,
+        backgroundColor: 'white',
+      },
   });

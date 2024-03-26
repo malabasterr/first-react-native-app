@@ -1,13 +1,13 @@
 import { StyleSheet, Image, View, ImageBackground, Text, TextInput, Button } from 'react-native';
 import React from 'react';
 
-export default function Level8Screen() {
+export default function Level8Screen({navigation}) {
 
   const [answer, setAnswer] = React.useState('');
   
   const checkAnswer = () => {
     if (answer.toUpperCase() === 'DUNNO') {
-      navigation.navigate('Level8');
+      navigation.navigate('Level9');
     } else {
       alert('Incorrect answer. Please try again.');
     }

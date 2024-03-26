@@ -8,7 +8,9 @@ export default function Level9Screen({navigation}) {
         source={require('../assets/background.jpg')} 
         resizeMode="cover" 
         style={styles.bgImage}>
-        
+        <Image source={require('../assets/level9.png')}
+            style={styles.levelTitle} />
+
         <Text>The final hurdle!</Text>
 
         <Pressable onPress={() =>
@@ -71,6 +73,11 @@ export default function Level9Screen({navigation}) {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
+    },
+    levelTitle: {
+      width: 150,
+      height: 80,
+      marginBottom: 50,
     },
     button: {
     },

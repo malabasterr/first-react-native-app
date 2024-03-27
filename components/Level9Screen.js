@@ -11,8 +11,6 @@ export default function Level9Screen({navigation}) {
         <Image source={require('../assets/level9.png')}
             style={styles.levelTitle} />
 
-        <Text>The final hurdle!</Text>
-
         <Pressable onPress={() =>
             navigation.navigate('ButtonA')} >
             <Image source={require('../assets/buttons/A.png')}
@@ -77,11 +75,11 @@ export default function Level9Screen({navigation}) {
     levelTitle: {
       width: 150,
       height: 80,
-      marginBottom: 50,
+      marginBottom: 40,
     },
     button: {
-      width: 30,
-      height: 40,
-      margin: 5,
+      width: 33,
+      height: 44,
+      margin: 6,
     },
   });

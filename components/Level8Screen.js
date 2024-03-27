@@ -6,7 +6,7 @@ export default function Level8Screen({navigation}) {
   const [answer, setAnswer] = React.useState('');
   
   const checkAnswer = () => {
-    if (answer.toUpperCase() === '5D3SD334D') {
+    if (answer.toUpperCase() === 'MADDY') { //5D3SD334D //THIS WILL NEED TO BE CHANGED!!!!
       navigation.navigate('Level9');
     } else {
       alert('Incorrect answer. Please try again. Remember to use the last digit/letter from each of your answers');
@@ -43,7 +43,7 @@ export default function Level8Screen({navigation}) {
                 value={answer}
                 placeholder="ANSWER"
                 keyboardType="default"
-                autoCapitalize='words'
+                autoCapitalize='characters'
                 enterKeyHint='enter'
                 maxLength={9}
                 textAlign='center'

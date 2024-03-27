@@ -10,15 +10,18 @@ export default function DoorButton({navigation}) {
             resizeMode="cover" 
             style={styles.bgImage}>
 
+        <View style={styles.imgContainer}>
+
+        <Image source={require('../../assets/door.jpg')}
+            style={styles.popUp} />
+
           <Pressable onPress={() =>
             navigation.navigate('Level8')} >
             <Image source={require('../../assets/exitCross.png')}
               style={styles.exit} />
           </Pressable>
 
-          <Image source={require('../../assets/buttons/A.png')} //This will need to be replaced with the actual clue/photo
-            style={styles.popUp} />
-
+            </View>
         </ImageBackground>
       </View>
     );
@@ -34,13 +37,19 @@ export default function DoorButton({navigation}) {
       alignItems: 'center',
     },
     popUp: {
-      width: 30,
-      height: 40,
+      width: 145,
+      height: 700,
       margin: 5,
     },
     exit: {
       width: 30,
-      height: 40,
+      height: 30,
       margin: 5,
+    },
+    imgContainer: {
+        flexDirection: 'row',
+        backgroundColor: '#ffffc3',
+        padding: 10,
+        paddingLeft: 47,
     },
   });

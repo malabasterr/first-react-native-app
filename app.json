@@ -4,10 +4,10 @@
     "slug": "GraceBirthday",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/fullHeart.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/fullHeart.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,20 +19,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/fullHeart.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "expo-font",
-        {
-          "fonts": ["./assets/fonts/ArcadeClassic.ttf"]
-        }
-      ]
-    ]
+      "favicon": "./assets/fullHeart.png"
+    }
   }
 }

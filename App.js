@@ -22,6 +22,7 @@ import ButtonI from './components/Level9Buttons/ButtonI';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+
   return (
 
 // Navigation between pages

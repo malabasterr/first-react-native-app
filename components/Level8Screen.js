@@ -6,10 +6,10 @@ export default function Level8Screen({navigation}) {
   const [answer, setAnswer] = React.useState('');
   
   const checkAnswer = () => {
-    if (answer.toUpperCase() === 'DUNNO') {
+    if (answer.toUpperCase() === '5D3SD334D') {
       navigation.navigate('Level9');
     } else {
-      alert('Incorrect answer. Please try again.');
+      alert('Incorrect answer. Please try again. Remember to use the last digit/letter from each of your answers');
     }
   };
 
@@ -22,11 +22,15 @@ export default function Level8Screen({navigation}) {
         <Image source={require('../assets/level8.png')}
             style={styles.levelTitle} />
         
-        <Text>This will be full of all of the many scavenger hunt questions. For example 
-        1. Who lives at whatever whenever and when did they die?
-        2. How long does it take for whatever whenever?
-        3. How ridiculous is all of this fake writing because I think it is very silly?</Text>
-
+        <Text>Number of stars opposite Caldey</Text>
+        <Text>Man at 6 Vane Street</Text>
+        <Text>Year the visiting prince at 55 Fitzroy House died</Text>
+        <Text>Greek mythological character on Pulteney Bridge</Text>
+        <Text>1972 award given to the site of Javert’s death</Text>
+        <Text>Year the Guidhall memorial stone was laid</Text>
+        <Text>Number of humanoid faces above the King’s and Queen’s Baths</Text>
+        <Text>Number of pillars surrounding this door</Text>
+        <Text>The liquid half of the show at the Theatre Royal tonight</Text>
         <Text>What is the final answer?</Text>
             <TextInput
                 style={styles.input}

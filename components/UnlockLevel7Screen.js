@@ -72,6 +72,7 @@ export default function UnlockLevel7Screen({navigation}) {
       backgroundColor: '#8138d0',
       marginTop: 100,
       marginBottom: 300,
+      textAlign: 'center',
     },
     submit: {
       width: 40,

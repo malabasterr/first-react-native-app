@@ -16,7 +16,7 @@ export default function ButtonA({navigation}) {
               style={styles.exit} />
           </Pressable>
 
-          <Image source={require('../../assets/buttons/A.png')} //This will need to be replaced with the actual clue/photo
+          <Image source={require('../../assets/lasIguanas/LI2.png')}
             style={styles.popUp} />
 
         </ImageBackground>
@@ -34,8 +34,8 @@ export default function ButtonA({navigation}) {
       alignItems: 'center',
     },
     popUp: {
-      width: 30,
-      height: 40,
+      width: 310,
+      height: 300,
       margin: 5,
     },
     exit: {

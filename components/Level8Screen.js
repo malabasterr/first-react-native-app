@@ -1,4 +1,4 @@
-import { StyleSheet, Image, View, ImageBackground, Text, TextInput, Button } from 'react-native';
+import { StyleSheet, Image, View, ImageBackground, Text, TextInput, Pressable } from 'react-native';
 import React from 'react';
 
 export default function Level8Screen({navigation}) {
@@ -22,16 +22,20 @@ export default function Level8Screen({navigation}) {
         <Image source={require('../assets/level8.png')}
             style={styles.levelTitle} />
         
-        <Text>Number of stars opposite Caldey</Text>
-        <Text>Man at 6 Vane Street</Text>
-        <Text>Year the visiting prince at 55 Fitzroy House died</Text>
-        <Text>Greek mythological character on Pulteney Bridge</Text>
-        <Text>1972 award given to the site of Javert’s death</Text>
-        <Text>Year the Guidhall memorial stone was laid</Text>
-        <Text>Number of humanoid faces above the King’s and Queen’s Baths</Text>
-        <Text>Number of pillars surrounding this door</Text>
-        <Text>The liquid half of the show at the Theatre Royal tonight</Text>
-        <Text>What is the final answer?</Text>
+        <Text style={styles.heading}>String together the last character (letter or digit) of each of these answers to get the final code</Text>
+        <View style={styles.questions}>
+        <Text style={styles.text}>Number of stars opposite Caldey</Text>
+        <Text style={styles.text}>Man at 6 Vane Street</Text>
+        <Text style={styles.text}>Year the visiting prince at 55 Fitzroy House died</Text>
+        <Text style={styles.text}>Greek mythological character on Pulteney Bridge</Text>
+        <Text style={styles.text}>1972 award given to the site of Javert’s death</Text>
+        <Text style={styles.text}>Year the Guidhall memorial stone was laid</Text>
+        <Text style={styles.text}>Number of humanoid faces above the King’s and Queen’s Baths</Text>
+        <Text style={styles.text}>Number of pillars surrounding this door</Text>
+        <Text style={styles.text}>The liquid half of the show at the Theatre Royal tonight</Text>
+        </View>
+
+        <View style={styles.form}>
             <TextInput
                 style={styles.input}
                 onChangeText={setAnswer}
@@ -40,11 +44,14 @@ export default function Level8Screen({navigation}) {
                 keyboardType="default"
                 autoCapitalize='words'
                 enterKeyHint='enter'
-                maxLength={8}
+                maxLength={9}
                 textAlign='center'
           />
-        <Button title="Submit" onPress={checkAnswer} />
-
+              <Pressable onPress={checkAnswer} >
+                <Image source={require('../assets/submitButton.png')}
+                  style={styles.submit} />
+              </Pressable>
+</View>
       </ImageBackground>
     </View>
     );
@@ -58,19 +65,50 @@ export default function Level8Screen({navigation}) {
     levelTitle: {
       width: 150,
       height: 80,
-      marginBottom: 50,
     },
     bgImage: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
     },
+    heading: {
+      color: 'white',
+      width: 325,
+      padding: 5,
+      fontSize: 19,
+      fontFamily: 'Oswald_700Bold',
+      backgroundColor: '#8138d0',
+      textAlign: 'center',
+      margin: 20,
+    },
+    text: {
+      color: 'black',
+      width: 325,
+      padding: 5,
+      fontSize: 16,
+      fontFamily: 'Oswald_700Bold',
+      backgroundColor: '#ff88ae',
+      textAlign: 'left',
+    },
+    questions: {
+      margin: 20,
+    },
     input: {
       height: 40,
       width: 150,
-      margin: 50,
+      margin: 20,
       borderWidth: 1,
       padding: 10,
       backgroundColor: 'white',
+    },
+    submit: {
+      width: 40,
+      height: 40,
+      marginTop: 20,
+      padding: 10,
+    },
+    form: {
+      flexDirection: 'row',
+      marginBottom: 40,
     },
   });

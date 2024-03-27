@@ -11,7 +11,7 @@ export default function DoorButton({navigation}) {
             style={styles.bgImage}>
 
           <Pressable onPress={() =>
-            navigation.navigate('Level9')} >
+            navigation.navigate('Level8')} >
             <Image source={require('../../assets/exitCross.png')}
               style={styles.exit} />
           </Pressable>

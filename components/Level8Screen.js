@@ -31,7 +31,8 @@ export default function Level8Screen({navigation}) {
         <Text style={styles.text}>1972 award given to the site of Javert’s death</Text>
         <Text style={styles.text}>Year the Guidhall memorial stone was laid</Text>
         <Text style={styles.text}>Number of humanoid faces above the King’s and Queen’s Baths</Text>
-        <Text style={styles.text}>Number of pillars surrounding this door</Text>
+        <Pressable onPress={() =>
+            navigation.navigate('DoorButton')} ><Text style={styles.text}>Number of pillars surrounding <Text style={styles.doorText}>this door</Text></Text></Pressable>
         <Text style={styles.text}>The liquid half of the show at the Theatre Royal tonight</Text>
         </View>
 
@@ -85,6 +86,13 @@ export default function Level8Screen({navigation}) {
       color: 'black',
       width: 325,
       padding: 5,
+      fontSize: 16,
+      fontFamily: 'Oswald_700Bold',
+      backgroundColor: '#ff88ae',
+      textAlign: 'left',
+    },
+    doorText: {
+      color: 'blue',
       fontSize: 16,
       fontFamily: 'Oswald_700Bold',
       backgroundColor: '#ff88ae',

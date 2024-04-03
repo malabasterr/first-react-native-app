@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Import all pages
 import HomeScreen from './components/HomeScreen';
-import ProfileScreen from './components/ProfileScreen';
 import UnlockLevel7Screen from './components/UnlockLevel7Screen';
 import Level7Screen from './components/Level7Screen';
 import Level8Screen from './components/Level8Screen';
@@ -31,22 +30,21 @@ export default function App() {
 
     <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Profile" component={ProfileScreen} />
-          <Stack.Screen name="UnlockLevel7" component={UnlockLevel7Screen} />
-          <Stack.Screen name="Level7" component={Level7Screen} />
-          <Stack.Screen name="Level8" component={Level8Screen} />
-          <Stack.Screen name="Level9" component={Level9Screen} />
-          <Stack.Screen name="ButtonA" component={ButtonA} />
-          <Stack.Screen name="ButtonB" component={ButtonB} />
-          <Stack.Screen name="ButtonC" component={ButtonC} />
-          <Stack.Screen name="ButtonD" component={ButtonD} />
-          <Stack.Screen name="ButtonE" component={ButtonE} />
-          <Stack.Screen name="ButtonF" component={ButtonF} />
-          <Stack.Screen name="ButtonG" component={ButtonG} />
-          <Stack.Screen name="ButtonH" component={ButtonH} />
-          <Stack.Screen name="ButtonI" component={ButtonI} />
-          <Stack.Screen name="DoorButton" component={DoorButton} />
+          <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }}/>
+          <Stack.Screen name="UnlockLevel7" component={UnlockLevel7Screen} options={{ title: 'Unlock' }}/>
+          <Stack.Screen name="Level7" component={Level7Screen} options={{ title: 'Level 7' }}/>
+          <Stack.Screen name="Level8" component={Level8Screen} options={{ title: 'Level 8' }}/>
+          <Stack.Screen name="Level9" component={Level9Screen} options={{ title: 'Level 9' }}/>
+          <Stack.Screen name="ButtonA" component={ButtonA} options={{ title: 'Level 9 - A' }}/>
+          <Stack.Screen name="ButtonB" component={ButtonB} options={{ title: 'Level 9 - B' }}/>
+          <Stack.Screen name="ButtonC" component={ButtonC} options={{ title: 'Level 9 - C' }}/>
+          <Stack.Screen name="ButtonD" component={ButtonD} options={{ title: 'Level 9 - D' }}/>
+          <Stack.Screen name="ButtonE" component={ButtonE} options={{ title: 'Level 9 - E' }}/>
+          <Stack.Screen name="ButtonF" component={ButtonF} options={{ title: 'Level 9 - F' }}/>
+          <Stack.Screen name="ButtonG" component={ButtonG} options={{ title: 'Level 9 - G' }}/>
+          <Stack.Screen name="ButtonH" component={ButtonH} options={{ title: 'Level 9 - H' }}/>
+          <Stack.Screen name="ButtonI" component={ButtonI} options={{ title: 'Level 9 - I' }}/>
+          <Stack.Screen name="DoorButton" component={DoorButton} options={{ title: 'Level 8' }}/>
         </Stack.Navigator>
     </NavigationContainer>
   );

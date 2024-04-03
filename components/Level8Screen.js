@@ -6,7 +6,7 @@ export default function Level8Screen({navigation}) {
   const [answer, setAnswer] = React.useState('');
   
   const checkAnswer = () => {
-    if (answer.toUpperCase() === 'MADDY') { //5D3SD334D //THIS WILL NEED TO BE CHANGED!!!!
+    if (answer.toUpperCase() === '5D3SD334D') {
       navigation.navigate('Level9');
     } else {
       alert('Incorrect answer. Please try again. Remember to use the last digit/letter from each of your answers');
@@ -23,36 +23,38 @@ export default function Level8Screen({navigation}) {
             style={styles.levelTitle} />
         
         <Text style={styles.heading}>String together the last character (letter or digit) of each of these answers to get the final code</Text>
+
         <View style={styles.questions}>
-        <Text style={styles.text}>Number of stars opposite Caldey</Text>
-        <Text style={styles.text}>Man at 6 Vane Street</Text>
-        <Text style={styles.text}>Year the visiting prince at 55 Fitzroy House died</Text>
-        <Text style={styles.text}>Greek mythological character on Pulteney Bridge</Text>
-        <Text style={styles.text}>1972 award given to the site of Javert’s death</Text>
-        <Text style={styles.text}>Year the Guidhall memorial stone was laid</Text>
-        <Text style={styles.text}>Number of humanoid faces above the King’s and Queen’s Baths</Text>
-        <Pressable onPress={() =>
-            navigation.navigate('DoorButton')} ><Text style={styles.text}>Number of pillars surrounding <Text style={styles.doorText}>this door</Text></Text></Pressable>
-        <Text style={styles.text}>The liquid half of the show at the Theatre Royal tonight</Text>
+          <Text style={styles.text}>Number of stars opposite Caldey</Text>
+          <Text style={styles.text}>Man at 6 Vane Street</Text>
+          <Text style={styles.text}>Year the visiting prince at 55 Fitzroy House died</Text>
+          <Text style={styles.text}>Greek mythological character on Pulteney Bridge</Text>
+          <Text style={styles.text}>1972 award given to the site of Javert’s death</Text>
+          <Text style={styles.text}>Year the Guidhall memorial stone was laid</Text>
+          <Text style={styles.text}>Number of humanoid faces above the King’s and Queen’s Baths</Text>
+          <Pressable onPress={() =>
+              navigation.navigate('DoorButton')} ><Text style={styles.text}>Number of pillars surrounding <Text style={styles.doorText}>this door</Text></Text></Pressable>
+          <Text style={styles.text}>The liquid half of the show at the Theatre Royal tonight</Text>
         </View>
 
         <View style={styles.form}>
-            <TextInput
-                style={styles.input}
-                onChangeText={setAnswer}
-                value={answer}
-                placeholder="ANSWER"
-                keyboardType="default"
-                autoCapitalize='characters'
-                enterKeyHint='enter'
-                maxLength={9}
-                textAlign='center'
+          <TextInput
+            style={styles.input}
+            onChangeText={setAnswer}
+            value={answer}
+            placeholder="ANSWER"
+            keyboardType="default"
+            autoCapitalize='characters'
+            enterKeyHint='enter'
+            maxLength={9}
+            textAlign='center'
           />
-              <Pressable onPress={checkAnswer} >
-                <Image source={require('../assets/submitButton.png')}
-                  style={styles.submit} />
-              </Pressable>
-</View>
+          <Pressable onPress={checkAnswer} >
+            <Image source={require('../assets/submitButton.png')}
+              style={styles.submit} />
+          </Pressable>
+        </View>
+        
       </ImageBackground>
     </View>
     );

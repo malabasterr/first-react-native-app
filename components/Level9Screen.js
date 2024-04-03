@@ -1,4 +1,4 @@
-import { StyleSheet, View, ImageBackground, Text, Button, Image, Pressable } from 'react-native';
+import { StyleSheet, View, ImageBackground, Image, Pressable } from 'react-native';
 import React from 'react';
 
 export default function Level9Screen({navigation}) {

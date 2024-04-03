@@ -1,4 +1,4 @@
-import { Text, View, TextInput, StyleSheet, ImageBackground, Button, Pressable, Image } from 'react-native';
+import { Text, View, TextInput, StyleSheet, ImageBackground, Pressable, Image } from 'react-native';
 import React from 'react';
 
 export default function UnlockLevel7Screen({navigation}) {

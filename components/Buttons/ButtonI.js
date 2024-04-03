@@ -10,14 +10,15 @@ export default function ButtonI({navigation}) {
             resizeMode="cover" 
             style={styles.bgImage}>
 
+          <View style={styles.imgContainer}>
             <Pressable onPress={() =>
               navigation.navigate('Level9')} >
               <Image source={require('../../assets/exitCross.png')}
                 style={styles.exit} />
             </Pressable>
-
-            <Image source={require('../../assets/level7.png')} //This will need to be replaced with the actual clue/photo
+            <Image source={require('../../assets/lasIguanas/LI9.png')} //This will need to be replaced with the actual clue/photo
               style={styles.popUp} />
+            </View>
 
         </ImageBackground>
       </View>
@@ -34,13 +35,18 @@ export default function ButtonI({navigation}) {
       alignItems: 'center',
     },
     popUp: {
-      width: 30,
-      height: 40,
+      width: 340,
+      height: 205,
       margin: 5,
     },
     exit: {
       width: 30,
       height: 40,
       margin: 5,
+      marginLeft: 300,
+    },
+    imgContainer: {
+        padding: 1,
+        paddingLeft: 0,
     },
   });

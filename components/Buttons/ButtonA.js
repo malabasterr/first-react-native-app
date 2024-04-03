@@ -10,20 +10,22 @@ export default function ButtonA({navigation}) {
             resizeMode="cover" 
             style={styles.bgImage}>
 
-          <Pressable onPress={() =>
-            navigation.navigate('Level9')} >
-            <Image source={require('../../assets/exitCross.png')}
-              style={styles.exit} />
-          </Pressable>
-
-          <Image source={require('../../assets/lasIguanas/LI2.png')}
-            style={styles.popUp} />
+          <View style={styles.imgContainer}>
+            <Image source={require('../../assets/lasIguanas/LI2.png')}
+              style={styles.popUp} />
+            <Pressable onPress={() =>
+              navigation.navigate('Level9')} >
+              <Image source={require('../../assets/exitCross.png')}
+                style={styles.exit} />
+            </Pressable>
+          </View>
 
         </ImageBackground>
       </View>
     );
   };
 
+  // styles
   const styles = StyleSheet.create({
     container: {
       flex: 1
@@ -42,5 +44,10 @@ export default function ButtonA({navigation}) {
       width: 30,
       height: 40,
       margin: 5,
+    },
+    imgContainer: {
+        flexDirection: 'row',
+        padding: 10,
+        paddingLeft: 47,
     },
   });

@@ -18,4 +18,4 @@ Resart the app (with `npx expo start`)
 
 -------------------------------------------------------
 
-Left to do- once app is running, check whether it is always the homescreen that reloads when app is reloaded
+There is no icon once downloaded on Android

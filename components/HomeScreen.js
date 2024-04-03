@@ -29,7 +29,7 @@ export default function HomeScreen({navigation}) {
       flex: 1
     },
     level: {
-      width: 300,
+      width: "77%",
       height: 160,
       marginBottom: 100,
     },

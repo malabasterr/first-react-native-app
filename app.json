@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "GraceBirthday",
-    "slug": "GraceBirthday",
+    "name": "Level 7",
+    "slug": "level-7",
     "version": "1.0.0",
+    "description": "To unlock level 7 onwards for Grace's birthday treasure hunt",
     "orientation": "portrait",
-    "icon": "./assets/fullHeart.png",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/fullHeart.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,10 +22,23 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/fullHeart.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.malabaster.level7"
     },
     "web": {
       "favicon": "./assets/fullHeart.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e72edd13-71d1-46fc-8a99-9dd261f4e845"
+      }
+    },
+    "owner": "malabaster",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e72edd13-71d1-46fc-8a99-9dd261f4e845"
     }
   }
 }

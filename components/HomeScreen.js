@@ -11,7 +11,7 @@ export default function HomeScreen({navigation}) {
   
           <Image source={require('../assets/level7.png')}
             style={styles.level} />
-            <Pressable onPress={() =>
+            <Pressable style={styles.unlockContainer} onPress={() =>
               navigation.navigate('UnlockLevel7')} >
               <Image source={require('../assets/unlockButton.png')}
                 style={styles.unlock} />
@@ -30,16 +30,20 @@ export default function HomeScreen({navigation}) {
     },
     level: {
       width: "77%",
-      height: 160,
-      marginBottom: 100,
+      height: "21.5%",
+      marginBottom: "12%",
     },
     bgImage: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
     },
+    unlockContainer: {
+      width: "39%",
+      height: "7%",
+    },
     unlock: {
-      width: 150,
-      height: 48,
+      width: "99%",
+      height: "90%",
     },
   });

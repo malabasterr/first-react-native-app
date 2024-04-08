@@ -37,19 +37,20 @@ export default function DoorButton({navigation}) {
       alignItems: 'center',
     },
     popUp: {
-      width: 145,
-      height: 700,
-      margin: 5,
+      width: "40%",
+      height: "100%",
+      margin: "2%",
     },
     exit: {
-      width: 30,
-      height: 30,
-      margin: 5,
+      width: "150%",
+      height: "5%",
+      margin: "3%",
     },
     imgContainer: {
         flexDirection: 'row',
         backgroundColor: '#ffffc3',
-        padding: 10,
-        paddingLeft: 47,
+        padding: "6%",
+        paddingLeft: "11%",
+        height: "95%",
     },
   });

@@ -21,8 +21,10 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/fullHeart.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "backgroundImage": "./assets/logo.png"
       },
+      "icon": "./assets/logo.png",
       "package": "com.malabaster.level7"
     },
     "web": {

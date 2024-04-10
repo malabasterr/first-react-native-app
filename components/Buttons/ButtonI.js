@@ -35,18 +35,18 @@ export default function ButtonI({navigation}) {
       alignItems: 'center',
     },
     popUp: {
-      width: 340,
-      height: 205,
-      margin: 5,
+      width: "90%",
+      height: "55%",
+      marginBottom: "100%",
     },
     exit: {
-      width: 30,
-      height: 40,
-      margin: 5,
-      marginLeft: 300,
+      width: "80%",
+      height: "8%",
+      margin: "5%",
     },
     imgContainer: {
-        padding: 1,
-        paddingLeft: 0,
+        flexDirection: 'row',
+        padding: "3%",
+        paddingLeft: "6%",
     },
   });

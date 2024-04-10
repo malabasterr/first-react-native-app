@@ -11,47 +11,47 @@ export default function Level9Screen({navigation}) {
         <Image source={require('../assets/level9.png')}
             style={styles.levelTitle} />
 
-        <Pressable onPress={() =>
+        <Pressable style={styles.buttonContainer} onPress={() =>
             navigation.navigate('ButtonA')} >
             <Image source={require('../assets/buttons/A.png')}
                 style={styles.button} />
         </Pressable>
-        <Pressable onPress={() =>
+        <Pressable style={styles.buttonContainer} onPress={() =>
             navigation.navigate('ButtonB')} >
             <Image source={require('../assets/buttons/B.png')}
                 style={styles.button} />
         </Pressable>
-        <Pressable onPress={() =>
+        <Pressable style={styles.buttonContainer} onPress={() =>
             navigation.navigate('ButtonC')} >
             <Image source={require('../assets/buttons/C.png')}
                 style={styles.button} />
         </Pressable>
-        <Pressable onPress={() =>
+        <Pressable style={styles.buttonContainer} onPress={() =>
             navigation.navigate('ButtonD')} >
             <Image source={require('../assets/buttons/D.png')}
                 style={styles.button} />
         </Pressable>
-        <Pressable onPress={() =>
+        <Pressable style={styles.buttonContainer} onPress={() =>
             navigation.navigate('ButtonE')} >
             <Image source={require('../assets/buttons/E.png')}
                 style={styles.button} />
         </Pressable>
-        <Pressable onPress={() =>
+        <Pressable style={styles.buttonContainer} onPress={() =>
             navigation.navigate('ButtonF')} >
             <Image source={require('../assets/buttons/F.png')}
                 style={styles.button} />
         </Pressable>
-        <Pressable onPress={() =>
+        <Pressable style={styles.buttonContainer} onPress={() =>
             navigation.navigate('ButtonG')} >
             <Image source={require('../assets/buttons/G.png')}
                 style={styles.button} />
         </Pressable>
-        <Pressable onPress={() =>
+        <Pressable style={styles.buttonContainer} onPress={() =>
             navigation.navigate('ButtonH')} >
             <Image source={require('../assets/buttons/H.png')}
                 style={styles.button} />
         </Pressable>
-        <Pressable onPress={() =>
+        <Pressable style={styles.buttonContainer} onPress={() =>
             navigation.navigate('ButtonI')} >
             <Image source={require('../assets/buttons/I.png')}
                 style={styles.button} />
@@ -73,13 +73,17 @@ export default function Level9Screen({navigation}) {
       alignItems: 'center',
     },
     levelTitle: {
-      width: 150,
-      height: 80,
-      marginBottom: 40,
+      width: "40%",
+      height: "11%",
+      margin: "6%",
+    },
+    buttonContainer: {
+      width: "9%",
+      height: "6%",
+      margin: "2%",
     },
     button: {
-      width: 33,
-      height: 44,
-      margin: 6,
+      width: "100%",
+      height: "100%",
     },
   });
